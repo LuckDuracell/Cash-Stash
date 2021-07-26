@@ -16,7 +16,6 @@
 		0AD8DD3926AE542B00AC6C1E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3826AE542B00AC6C1E /* HomePage.swift */; };
 		0AD8DD3B26AE548900AC6C1E /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */; };
 		0AD8DD3F26AE5BB200AC6C1E /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3E26AE5BB200AC6C1E /* Wallet.swift */; };
-		0AD8DD4226AE709C00AC6C1E /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0AD8DD4126AE709C00AC6C1E /* Introspect */; };
 		0AD8DD4526AE945E00AC6C1E /* GiftcardsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4426AE945E00AC6C1E /* GiftcardsPage.swift */; };
 		0AD8DD4726AE951F00AC6C1E /* SavingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4626AE951F00AC6C1E /* SavingsPage.swift */; };
 		0AD8DD4926AEA14500AC6C1E /* TotalsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4826AEA14500AC6C1E /* TotalsPage.swift */; };
@@ -62,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AD8DD4226AE709C00AC6C1E /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +167,6 @@
 			);
 			name = "Cash Stash";
 			packageProductDependencies = (
-				0AD8DD4126AE709C00AC6C1E /* Introspect */,
 			);
 			productName = "Cash Stash";
 			productReference = 0AD8DD0826AE53FC00AC6C1E /* Cash Stash.app */;
@@ -244,7 +241,6 @@
 			);
 			mainGroup = 0AD8DCFF26AE53FC00AC6C1E;
 			packageReferences = (
-				0AD8DD4026AE709C00AC6C1E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 0AD8DD0926AE53FC00AC6C1E /* Products */;
 			projectDirPath = "";
@@ -643,25 +639,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0AD8DD4026AE709C00AC6C1E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0AD8DD4126AE709C00AC6C1E /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0AD8DD4026AE709C00AC6C1E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0AD8DD0026AE53FC00AC6C1E /* Project object */;
 }

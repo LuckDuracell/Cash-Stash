@@ -12,21 +12,6 @@ import Introspect
 struct ContentView: View {
 
     var body: some View {
-//        List {
-//            ForEach(items) { item in
-//                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-//            }
-//            .onDelete(perform: deleteItems)
-//        }
-//        .toolbar {
-//            #if os(iOS)
-//            EditButton()
-//            #endif
-//
-//            Button(action: addItem) {
-//                Label("Add Item", systemImage: "plus")
-//            }
-//        }
         TabView {
             HomePage()
             GiftcardsPage()
@@ -34,9 +19,6 @@ struct ContentView: View {
             TotalsPage()
         }.tabViewStyle(.page)
         .edgesIgnoringSafeArea(.all)
-        
-        
-        
     }
 }
 
