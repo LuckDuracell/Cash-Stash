@@ -11,10 +11,15 @@
 		0AD8DD0E26AE53FC00AC6C1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */; };
 		0AD8DD1026AE53FD00AC6C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD8DD0F26AE53FD00AC6C1E /* Assets.xcassets */; };
 		0AD8DD1326AE53FD00AC6C1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD8DD1226AE53FD00AC6C1E /* Preview Assets.xcassets */; };
-		0AD8DD1526AE53FD00AC6C1E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD1426AE53FD00AC6C1E /* Persistence.swift */; };
-		0AD8DD1826AE53FD00AC6C1E /* Cash_Stash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD1626AE53FD00AC6C1E /* Cash_Stash.xcdatamodeld */; };
 		0AD8DD2226AE53FD00AC6C1E /* Cash_StashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD2126AE53FD00AC6C1E /* Cash_StashTests.swift */; };
 		0AD8DD2C26AE53FD00AC6C1E /* Cash_StashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD2B26AE53FD00AC6C1E /* Cash_StashUITests.swift */; };
+		0AD8DD3926AE542B00AC6C1E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3826AE542B00AC6C1E /* HomePage.swift */; };
+		0AD8DD3B26AE548900AC6C1E /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */; };
+		0AD8DD3F26AE5BB200AC6C1E /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3E26AE5BB200AC6C1E /* Wallet.swift */; };
+		0AD8DD4226AE709C00AC6C1E /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0AD8DD4126AE709C00AC6C1E /* Introspect */; };
+		0AD8DD4526AE945E00AC6C1E /* GiftcardsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4426AE945E00AC6C1E /* GiftcardsPage.swift */; };
+		0AD8DD4726AE951F00AC6C1E /* SavingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4626AE951F00AC6C1E /* SavingsPage.swift */; };
+		0AD8DD4926AEA14500AC6C1E /* TotalsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4826AEA14500AC6C1E /* TotalsPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +45,16 @@
 		0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AD8DD0F26AE53FD00AC6C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AD8DD1226AE53FD00AC6C1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0AD8DD1426AE53FD00AC6C1E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		0AD8DD1726AE53FD00AC6C1E /* Cash_Stash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cash_Stash.xcdatamodel; sourceTree = "<group>"; };
 		0AD8DD1D26AE53FD00AC6C1E /* Cash StashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cash StashTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD8DD2126AE53FD00AC6C1E /* Cash_StashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash_StashTests.swift; sourceTree = "<group>"; };
 		0AD8DD2726AE53FD00AC6C1E /* Cash StashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cash StashUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD8DD2B26AE53FD00AC6C1E /* Cash_StashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash_StashUITests.swift; sourceTree = "<group>"; };
+		0AD8DD3826AE542B00AC6C1E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		0AD8DD3E26AE5BB200AC6C1E /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		0AD8DD4426AE945E00AC6C1E /* GiftcardsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftcardsPage.swift; sourceTree = "<group>"; };
+		0AD8DD4626AE951F00AC6C1E /* SavingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsPage.swift; sourceTree = "<group>"; };
+		0AD8DD4826AEA14500AC6C1E /* TotalsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD8DD4226AE709C00AC6C1E /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +108,10 @@
 			children = (
 				0AD8DD0B26AE53FC00AC6C1E /* Cash_StashApp.swift */,
 				0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */,
+				0AD8DD4326AE944300AC6C1E /* Pages */,
+				0AD8DD3E26AE5BB200AC6C1E /* Wallet.swift */,
+				0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */,
 				0AD8DD0F26AE53FD00AC6C1E /* Assets.xcassets */,
-				0AD8DD1426AE53FD00AC6C1E /* Persistence.swift */,
-				0AD8DD1626AE53FD00AC6C1E /* Cash_Stash.xcdatamodeld */,
 				0AD8DD1126AE53FD00AC6C1E /* Preview Content */,
 			);
 			path = "Cash Stash";
@@ -130,6 +141,17 @@
 			path = "Cash StashUITests";
 			sourceTree = "<group>";
 		};
+		0AD8DD4326AE944300AC6C1E /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0AD8DD3826AE542B00AC6C1E /* HomePage.swift */,
+				0AD8DD4426AE945E00AC6C1E /* GiftcardsPage.swift */,
+				0AD8DD4626AE951F00AC6C1E /* SavingsPage.swift */,
+				0AD8DD4826AEA14500AC6C1E /* TotalsPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +168,9 @@
 			dependencies = (
 			);
 			name = "Cash Stash";
+			packageProductDependencies = (
+				0AD8DD4126AE709C00AC6C1E /* Introspect */,
+			);
 			productName = "Cash Stash";
 			productReference = 0AD8DD0826AE53FC00AC6C1E /* Cash Stash.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +243,9 @@
 				Base,
 			);
 			mainGroup = 0AD8DCFF26AE53FC00AC6C1E;
+			packageReferences = (
+				0AD8DD4026AE709C00AC6C1E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 0AD8DD0926AE53FC00AC6C1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,10 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AD8DD1826AE53FD00AC6C1E /* Cash_Stash.xcdatamodeld in Sources */,
-				0AD8DD1526AE53FD00AC6C1E /* Persistence.swift in Sources */,
+				0AD8DD3F26AE5BB200AC6C1E /* Wallet.swift in Sources */,
+				0AD8DD3926AE542B00AC6C1E /* HomePage.swift in Sources */,
+				0AD8DD4526AE945E00AC6C1E /* GiftcardsPage.swift in Sources */,
 				0AD8DD0E26AE53FC00AC6C1E /* ContentView.swift in Sources */,
+				0AD8DD4726AE951F00AC6C1E /* SavingsPage.swift in Sources */,
 				0AD8DD0C26AE53FC00AC6C1E /* Cash_StashApp.swift in Sources */,
+				0AD8DD3B26AE548900AC6C1E /* GradientBackground.swift in Sources */,
+				0AD8DD4926AEA14500AC6C1E /* TotalsPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +463,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,7 +493,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,18 +644,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		0AD8DD1626AE53FD00AC6C1E /* Cash_Stash.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0AD8DD1726AE53FD00AC6C1E /* Cash_Stash.xcdatamodel */,
-			);
-			currentVersion = 0AD8DD1726AE53FD00AC6C1E /* Cash_Stash.xcdatamodel */;
-			path = Cash_Stash.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		0AD8DD4026AE709C00AC6C1E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0AD8DD4126AE709C00AC6C1E /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AD8DD4026AE709C00AC6C1E /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0AD8DD0026AE53FC00AC6C1E /* Project object */;
 }
