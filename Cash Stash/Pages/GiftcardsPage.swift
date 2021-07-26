@@ -219,7 +219,7 @@ struct GiftcardsPage: View {
                             .cornerRadius(10)
                             .padding()
                         
-                        Spacer()
+                        
                         Button {
                             let expn = NSExpression(format:amount)
                             let result = expn.expressionValue(with: nil, context: nil)
@@ -241,7 +241,8 @@ struct GiftcardsPage: View {
                                 .animation(.linear, value: 1)
                                 .padding()
                         }
-                    } .padding(.top, 100)
+                    }
+                    .padding(.top, -100)
                 }
             })
             .sheet(isPresented: $showEditSheet, onDismiss: {
@@ -339,7 +340,7 @@ struct GiftcardsPage: View {
                         .cornerRadius(10)
                         .padding()
                     
-                    Spacer()
+                    
                     Button {
                         let expn = NSExpression(format:amount)
                         let result = expn.expressionValue(with: nil, context: nil)
@@ -362,7 +363,7 @@ struct GiftcardsPage: View {
                             .padding()
                     }
                 }
-                .padding(.top, 100)
+                .padding(.top, -100)
                 }
             })
             .toolbar(content: {
