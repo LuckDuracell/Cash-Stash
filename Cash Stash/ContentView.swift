@@ -16,8 +16,9 @@ struct ContentView: View {
             HomePage()
             GiftcardsPage()
             SavingsPage()
-            TotalsPage()
-        }.tabViewStyle(.page)
+            //TotalsPage()
+        }
+        .tabViewStyle(.page)
         .edgesIgnoringSafeArea(.all)
     }
 }

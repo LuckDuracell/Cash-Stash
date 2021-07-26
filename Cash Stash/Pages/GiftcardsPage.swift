@@ -17,6 +17,14 @@ struct GiftcardsPage: View {
         whiteNavColor.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().standardAppearance = whiteNavColor
         
+        //Moves Header to the right side of toolbar when scrolling
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.firstLineHeadIndent = 72
+
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor.purple,
+            .paragraphStyle: paragraphStyle
+        ]
         
         //Clear List Background
         UITableView.appearance().backgroundColor = .clear
@@ -25,14 +33,14 @@ struct GiftcardsPage: View {
     @State private var wallets = Wallet2.loadFromFile()
     @State private var buttonScaled = true
     
+    @State var showDeleteAlert = false
     @State var showSheet = false
     @State var showEditSheet = false
     @State var editSheetIndex = 0
     
     @State var name = ""
-    @State var icon = ""
+    @State var icon = "cart.circle.fill"
     @State var amount = ""
-    @State var amountNum = ""
     
     @FocusState var showKeyboard: Bool
     
@@ -98,6 +106,7 @@ struct GiftcardsPage: View {
                         })
                     }
                     .navigationTitle("Giftcards Stash")
+                    
                     .toolbar(content: {
                         ToolbarItem(placement: .bottomBar) {
                             Button {
@@ -105,7 +114,7 @@ struct GiftcardsPage: View {
                                 showSheet.toggle()
                             } label: {
                                 Text("Add Stash")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(.purple)
                                     .padding()
                                     .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
                                     .background(Color.white)
@@ -116,8 +125,8 @@ struct GiftcardsPage: View {
                         }
                         ToolbarItem(placement: .navigationBarLeading) {
                             Text("Total: $\(total, specifier: "%.2f")")
-                                .foregroundColor(.white)
-                                .frame(width: UIScreen.main.bounds.width * 0.95, alignment: .leading)
+                                .foregroundColor(Color("opposite"))
+                                .frame(width: UIScreen.main.bounds.width * 0.5, alignment: .leading)
                         }
                     })
                 }
@@ -153,6 +162,7 @@ struct GiftcardsPage: View {
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
                                     .padding(5)
+                                    .foregroundColor(.purple)
                             }
                             Button {
                                 icon = "cart.circle.fill"
@@ -162,6 +172,7 @@ struct GiftcardsPage: View {
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
                                     .padding(5)
+                                    .foregroundColor(.purple)
                             }
                             Button {
                                 icon = "wifi.circle.fill"
@@ -171,6 +182,7 @@ struct GiftcardsPage: View {
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
                                     .padding(5)
+                                    .foregroundColor(.purple)
                             }
                             Button {
                                 icon = "film.circle.fill"
@@ -180,6 +192,7 @@ struct GiftcardsPage: View {
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
                                     .padding(5)
+                                    .foregroundColor(.purple)
                             }
                         }
                         .frame(width: UIScreen.main.bounds.width*0.9, height: 60, alignment: .center)
@@ -221,6 +234,7 @@ struct GiftcardsPage: View {
                         
                         
                         Button {
+                            if amount == "" || amount == " " { amount = "0" }
                             let expn = NSExpression(format:amount)
                             let result = expn.expressionValue(with: nil, context: nil)
                             let stringResult = "\(result!)"
@@ -233,13 +247,13 @@ struct GiftcardsPage: View {
                             showSheet.toggle()
                         } label: {
                             Text("Add Stash")
-                                .foregroundColor(.blue)
                                 .padding()
                                 .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(25)
                                 .animation(.linear, value: 1)
                                 .padding()
+                                .foregroundColor(.purple)
                         }
                     }
                     .padding(.top, -100)
@@ -276,6 +290,7 @@ struct GiftcardsPage: View {
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)
                                 .padding(5)
+                                .foregroundColor(.purple)
                         }
                         Button {
                             icon = "cart.circle.fill"
@@ -285,6 +300,7 @@ struct GiftcardsPage: View {
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)
                                 .padding(5)
+                                .foregroundColor(.purple)
                         }
                         Button {
                             icon = "wifi.circle.fill"
@@ -294,6 +310,7 @@ struct GiftcardsPage: View {
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)
                                 .padding(5)
+                                .foregroundColor(.purple)
                         }
                         Button {
                             icon = "film.circle.fill"
@@ -303,6 +320,7 @@ struct GiftcardsPage: View {
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)
                                 .padding(5)
+                                .foregroundColor(.purple)
                         }
                     }
                     .frame(width: UIScreen.main.bounds.width*0.9, height: 60, alignment: .center)
@@ -342,6 +360,7 @@ struct GiftcardsPage: View {
                     
                     
                     Button {
+                        if amount == "" || amount == " " { amount = "0" }
                         let expn = NSExpression(format:amount)
                         let result = expn.expressionValue(with: nil, context: nil)
                         let stringResult = "\(result!)"
@@ -354,14 +373,33 @@ struct GiftcardsPage: View {
                         showEditSheet.toggle()
                     } label: {
                         Text("Save Stash")
-                            .foregroundColor(.blue)
                             .padding()
                             .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(25)
                             .animation(.linear, value: 1)
                             .padding()
+                            .foregroundColor(.purple)
                     }
+                    
+                    Button {
+                        showDeleteAlert.toggle()
+                    } label: {
+                        Text("Delete Stash")
+                            .foregroundColor(.red)
+                            .padding()
+                            .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(25)
+                            .animation(.linear, value: 1)
+                            .padding(.top, -10)
+                    } .alert("Are you sure you want to delete this Stash?", isPresented: $showDeleteAlert) {
+                        Button("Delete") {
+                            wallets.remove(at: editSheetIndex)
+                            showEditSheet.toggle()
+                        } .foregroundColor(.red)
+                    } .accentColor(.purple)
+                    
                 }
                 .padding(.top, -100)
                 }
@@ -374,14 +412,14 @@ struct GiftcardsPage: View {
                             print("plus")
                         } label: {
                             Image(systemName: "plus")
-                                .foregroundColor(.blue)
+                                .foregroundColor(.purple)
                         }
                         Button {
                             amount = "\(amount)-"
                             print("minus")
                         } label: {
                             Image(systemName: "minus")
-                                .foregroundColor(.blue)
+                                .foregroundColor(.purple)
                         }
                         Spacer()
                         Button {
@@ -390,7 +428,7 @@ struct GiftcardsPage: View {
                         } label: {
                             Text("Done")
                                 .multilineTextAlignment(.trailing)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.purple)
                         }
                     }
                 })
