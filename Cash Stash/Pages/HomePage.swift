@@ -86,6 +86,7 @@ struct HomePage: View {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
                                         name = wallets[index].name
                                         amount = "\(wallets[index].amount)"
+                                        icon = wallets[index].icon
                                     })
                                 })
                             })
