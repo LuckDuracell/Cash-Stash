@@ -175,9 +175,9 @@ struct SavingsPage: View {
                                     .foregroundColor(.orange)
                             }
                             Button {
-                                icon = "creditcard.circle.fill"
+                                icon = "building.columns.fill"
                             } label: {
-                                Text("Card")
+                                Text("Bank")
                                     .padding(8)
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
@@ -304,9 +304,9 @@ struct SavingsPage: View {
                                 .foregroundColor(.orange)
                         }
                         Button {
-                            icon = "creditcard.circle.fill"
+                            icon = "building.columns.fill"
                         } label: {
-                            Text("Card")
+                            Text("Bank")
                                 .padding(8)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)
