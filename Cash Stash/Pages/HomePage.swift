@@ -122,13 +122,22 @@ struct HomePage: View {
                                 .cornerRadius(25)
                                 .animation(.linear, value: 1)
                                 .padding(.bottom, 30)
-                        } .shadow(radius: 15)
+                        } .shadow(color: .black.opacity(0.2), radius: 35)
                         , alignment: .bottom)
                     .toolbar(content: {
                             ToolbarItem(placement: .navigationBarLeading) {
                                 Text("Total: $\(total, specifier: "%.2f")")
                                     .foregroundColor(Color("opposite"))
                                     .frame(width: UIScreen.main.bounds.width * 0.5, alignment: .leading)
+                                
+// Testing the Add Stash Button shadows
+                                
+//                                    .onTapGesture(perform: {
+//                                        for _ in 0...15 {
+//                                            wallets.append(Wallet(name: "name", icon: "dollarsign.circle.fill", amount: 1))
+//                                        }
+//                                    })
+                                
                             }
                     })
                 }
