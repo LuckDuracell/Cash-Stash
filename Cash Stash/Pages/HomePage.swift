@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Introspect
+
 import CoreData
 
 struct HomePage: View {
@@ -157,6 +157,7 @@ struct HomePage: View {
                                 icon = "dollarsign.circle.fill"
                             } label: {
                                 Text("Cash")
+                                    .foregroundColor(.blue)
                                     .padding(8)
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
@@ -166,6 +167,7 @@ struct HomePage: View {
                                 icon = "bitcoinsign.circle.fill"
                             } label: {
                                 Text("Crypto")
+                                    .foregroundColor(.blue)
                                     .padding(8)
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
@@ -175,6 +177,7 @@ struct HomePage: View {
                                 icon = "creditcard.circle.fill"
                             } label: {
                                 Text("Card")
+                                    .foregroundColor(.blue)
                                     .padding(8)
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
@@ -184,6 +187,7 @@ struct HomePage: View {
                                 icon = "chart.pie.fill"
                             } label: {
                                 Text("Stocks")
+                                    .foregroundColor(.blue)
                                     .padding(8)
                                     .background(Color.gray.opacity(0.2))
                                     .cornerRadius(10)
@@ -279,6 +283,7 @@ struct HomePage: View {
                             icon = "dollarsign.circle.fill"
                         } label: {
                             Text("Cash")
+                                .foregroundColor(.blue)
                                 .padding(8)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)
@@ -288,6 +293,7 @@ struct HomePage: View {
                             icon = "bitcoinsign.circle.fill"
                         } label: {
                             Text("Crypto")
+                                .foregroundColor(.blue)
                                 .padding(8)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)
@@ -297,6 +303,7 @@ struct HomePage: View {
                             icon = "creditcard.circle.fill"
                         } label: {
                             Text("Card")
+                                .foregroundColor(.blue)
                                 .padding(8)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)
@@ -306,6 +313,7 @@ struct HomePage: View {
                             icon = "chart.pie.fill"
                         } label: {
                             Text("Stocks")
+                                .foregroundColor(.blue)
                                 .padding(8)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(10)

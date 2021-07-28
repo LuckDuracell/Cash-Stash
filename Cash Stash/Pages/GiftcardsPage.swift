@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Introspect
+
 import CoreData
 
 struct GiftcardsPage: View {

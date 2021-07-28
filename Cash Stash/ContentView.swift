@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-import Introspect
+
 
 struct ContentView: View {
 
