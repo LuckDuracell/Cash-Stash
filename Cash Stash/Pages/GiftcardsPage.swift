@@ -115,7 +115,7 @@ struct GiftcardsPage: View {
                             showSheet.toggle()
                         } label: {
                             Text("Add Stash")
-                                .foregroundColor(.blue)
+                                .foregroundColor(.purple)
                                 .padding()
                                 .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
                                 .background(Color.white)
