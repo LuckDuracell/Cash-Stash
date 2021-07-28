@@ -41,7 +41,7 @@ struct NewSheet3: View {
                         icon = "dollarsign.circle.fill"
                     } label: {
                         Text("Cash")
-                            .foregroundColor(.blue)
+                            .foregroundColor(color)
                             .padding(8)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(10)
@@ -51,7 +51,7 @@ struct NewSheet3: View {
                         icon = "bitcoinsign.circle.fill"
                     } label: {
                         Text("Crypto")
-                            .foregroundColor(.blue)
+                            .foregroundColor(color)
                             .padding(8)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(10)
@@ -61,7 +61,7 @@ struct NewSheet3: View {
                         icon = "creditcard.circle.fill"
                     } label: {
                         Text("Card")
-                            .foregroundColor(.blue)
+                            .foregroundColor(color)
                             .padding(8)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(10)
@@ -71,7 +71,7 @@ struct NewSheet3: View {
                         icon = "chart.pie.fill"
                     } label: {
                         Text("Stocks")
-                            .foregroundColor(.blue)
+                            .foregroundColor(color)
                             .padding(8)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(10)
@@ -129,7 +129,7 @@ struct NewSheet3: View {
                     showSheet.toggle()
                 } label: {
                     Text("Add Stash")
-                        .foregroundColor(.blue)
+                        .foregroundColor(color)
                         .padding()
                         .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
                         .background(Color.gray.opacity(0.2))

@@ -109,28 +109,27 @@ struct GiftcardsPage: View {
                         })
                     }
                     .navigationTitle("Giftcards Stash")
-                    
+                    .overlay(
+                        Button {
+                            scaleButton()
+                            showSheet.toggle()
+                        } label: {
+                            Text("Add Stash")
+                                .foregroundColor(.blue)
+                                .padding()
+                                .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
+                                .background(Color.white)
+                                .cornerRadius(25)
+                                .animation(.linear, value: 1)
+                                .padding(.bottom, 30)
+                        } .shadow(radius: 15)
+                        , alignment: .bottom)
                     .toolbar(content: {
-                        ToolbarItem(placement: .bottomBar) {
-                            Button {
-                                scaleButton()
-                                showSheet.toggle()
-                            } label: {
-                                Text("Add Stash")
-                                    .foregroundColor(.purple)
-                                    .padding()
-                                    .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
-                                    .background(Color.white)
-                                    .cornerRadius(25)
-                                    .animation(.linear, value: 1)
-                                    .padding(.bottom, 30)
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Text("Total: $\(total, specifier: "%.2f")")
+                                    .foregroundColor(Color("opposite"))
+                                    .frame(width: UIScreen.main.bounds.width * 0.5, alignment: .leading)
                             }
-                        }
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Text("Total: $\(total, specifier: "%.2f")")
-                                .foregroundColor(Color("opposite"))
-                                .frame(width: UIScreen.main.bounds.width * 0.5, alignment: .leading)
-                        }
                     })
                 }
             }
