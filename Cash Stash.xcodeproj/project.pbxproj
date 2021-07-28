@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A61288426B1156600098972 /* EditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288326B1156600098972 /* EditSheet.swift */; };
+		0A61288726B119AA00098972 /* EditSheet2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288626B119AA00098972 /* EditSheet2.swift */; };
+		0A61288926B119BA00098972 /* EditSheet3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288826B119BA00098972 /* EditSheet3.swift */; };
+		0A61288B26B11A6F00098972 /* NewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288A26B11A6F00098972 /* NewSheet.swift */; };
+		0A61288D26B11AD200098972 /* NewSheet2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288C26B11AD200098972 /* NewSheet2.swift */; };
+		0A61288F26B11AE700098972 /* NewSheet3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288E26B11AE700098972 /* NewSheet3.swift */; };
 		0AD8DD0C26AE53FC00AC6C1E /* Cash_StashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD0B26AE53FC00AC6C1E /* Cash_StashApp.swift */; };
 		0AD8DD0E26AE53FC00AC6C1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */; };
 		0AD8DD1026AE53FD00AC6C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD8DD0F26AE53FD00AC6C1E /* Assets.xcassets */; };
@@ -39,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A61288326B1156600098972 /* EditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet.swift; sourceTree = "<group>"; };
+		0A61288626B119AA00098972 /* EditSheet2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet2.swift; sourceTree = "<group>"; };
+		0A61288826B119BA00098972 /* EditSheet3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet3.swift; sourceTree = "<group>"; };
+		0A61288A26B11A6F00098972 /* NewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet.swift; sourceTree = "<group>"; };
+		0A61288C26B11AD200098972 /* NewSheet2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet2.swift; sourceTree = "<group>"; };
+		0A61288E26B11AE700098972 /* NewSheet3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet3.swift; sourceTree = "<group>"; };
 		0AD8DD0826AE53FC00AC6C1E /* Cash Stash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cash Stash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD8DD0B26AE53FC00AC6C1E /* Cash_StashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash_StashApp.swift; sourceTree = "<group>"; };
 		0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +93,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A61288526B1184400098972 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				0A61288326B1156600098972 /* EditSheet.swift */,
+				0A61288626B119AA00098972 /* EditSheet2.swift */,
+				0A61288826B119BA00098972 /* EditSheet3.swift */,
+				0A61288A26B11A6F00098972 /* NewSheet.swift */,
+				0A61288C26B11AD200098972 /* NewSheet2.swift */,
+				0A61288E26B11AE700098972 /* NewSheet3.swift */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
 		0AD8DCFF26AE53FC00AC6C1E = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +171,7 @@
 				0AD8DD4426AE945E00AC6C1E /* GiftcardsPage.swift */,
 				0AD8DD4626AE951F00AC6C1E /* SavingsPage.swift */,
 				0AD8DD4826AEA14500AC6C1E /* TotalsPage.swift */,
+				0A61288526B1184400098972 /* Sheets */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -284,14 +310,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A61288B26B11A6F00098972 /* NewSheet.swift in Sources */,
 				0AD8DD3F26AE5BB200AC6C1E /* Wallet.swift in Sources */,
 				0AD8DD3926AE542B00AC6C1E /* HomePage.swift in Sources */,
+				0A61288926B119BA00098972 /* EditSheet3.swift in Sources */,
 				0AD8DD4526AE945E00AC6C1E /* GiftcardsPage.swift in Sources */,
+				0A61288426B1156600098972 /* EditSheet.swift in Sources */,
 				0AD8DD0E26AE53FC00AC6C1E /* ContentView.swift in Sources */,
 				0AD8DD4726AE951F00AC6C1E /* SavingsPage.swift in Sources */,
 				0AD8DD0C26AE53FC00AC6C1E /* Cash_StashApp.swift in Sources */,
 				0AD8DD3B26AE548900AC6C1E /* GradientBackground.swift in Sources */,
+				0A61288726B119AA00098972 /* EditSheet2.swift in Sources */,
 				0AD8DD4926AEA14500AC6C1E /* TotalsPage.swift in Sources */,
+				0A61288F26B11AE700098972 /* NewSheet3.swift in Sources */,
+				0A61288D26B11AD200098972 /* NewSheet2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
