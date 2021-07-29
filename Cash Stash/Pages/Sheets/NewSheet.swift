@@ -20,8 +20,6 @@ struct NewSheet: View {
     
     @FocusState var showKeyboard: Bool
     
-    @State var buttonScaled = true
-    
     @State var showDeleteAlert = false
     
     
@@ -131,7 +129,7 @@ struct NewSheet: View {
                     Text("Add Stash")
                         .foregroundColor(color)
                         .padding()
-                        .frame(width: buttonScaled ? 250 : 220, height: buttonScaled ? 50 : 44, alignment: .center)
+                        .frame(width: 250, height: 50, alignment: .center)
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(25)
                         .animation(.linear, value: 1)

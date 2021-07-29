@@ -21,7 +21,7 @@
 		0AD8DD2C26AE53FD00AC6C1E /* Cash_StashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD2B26AE53FD00AC6C1E /* Cash_StashUITests.swift */; };
 		0AD8DD3926AE542B00AC6C1E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3826AE542B00AC6C1E /* HomePage.swift */; };
 		0AD8DD3B26AE548900AC6C1E /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */; };
-		0AD8DD3F26AE5BB200AC6C1E /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3E26AE5BB200AC6C1E /* Wallet.swift */; };
+		0AD8DD3F26AE5BB200AC6C1E /* PersistanceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD3E26AE5BB200AC6C1E /* PersistanceData.swift */; };
 		0AD8DD4526AE945E00AC6C1E /* GiftcardsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4426AE945E00AC6C1E /* GiftcardsPage.swift */; };
 		0AD8DD4726AE951F00AC6C1E /* SavingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4626AE951F00AC6C1E /* SavingsPage.swift */; };
 		0AD8DD4926AEA14500AC6C1E /* TotalsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD4826AEA14500AC6C1E /* TotalsPage.swift */; };
@@ -62,7 +62,7 @@
 		0AD8DD2B26AE53FD00AC6C1E /* Cash_StashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash_StashUITests.swift; sourceTree = "<group>"; };
 		0AD8DD3826AE542B00AC6C1E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
-		0AD8DD3E26AE5BB200AC6C1E /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		0AD8DD3E26AE5BB200AC6C1E /* PersistanceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceData.swift; sourceTree = "<group>"; };
 		0AD8DD4426AE945E00AC6C1E /* GiftcardsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftcardsPage.swift; sourceTree = "<group>"; };
 		0AD8DD4626AE951F00AC6C1E /* SavingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsPage.swift; sourceTree = "<group>"; };
 		0AD8DD4826AEA14500AC6C1E /* TotalsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsPage.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 				0AD8DD0B26AE53FC00AC6C1E /* Cash_StashApp.swift */,
 				0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */,
 				0AD8DD4326AE944300AC6C1E /* Pages */,
-				0AD8DD3E26AE5BB200AC6C1E /* Wallet.swift */,
+				0AD8DD3E26AE5BB200AC6C1E /* PersistanceData.swift */,
 				0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */,
 				0AD8DD0F26AE53FD00AC6C1E /* Assets.xcassets */,
 				0AD8DD1126AE53FD00AC6C1E /* Preview Content */,
@@ -311,7 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A61288B26B11A6F00098972 /* NewSheet.swift in Sources */,
-				0AD8DD3F26AE5BB200AC6C1E /* Wallet.swift in Sources */,
+				0AD8DD3F26AE5BB200AC6C1E /* PersistanceData.swift in Sources */,
 				0AD8DD3926AE542B00AC6C1E /* HomePage.swift in Sources */,
 				0A61288926B119BA00098972 /* EditSheet3.swift in Sources */,
 				0AD8DD4526AE945E00AC6C1E /* GiftcardsPage.swift in Sources */,
