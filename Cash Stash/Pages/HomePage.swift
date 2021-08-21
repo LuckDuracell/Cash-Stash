@@ -48,7 +48,6 @@ struct HomePage: View {
     @State var total: Double = 0
     
     var body: some View {
-        ZStack {
             NavigationView {
                 ZStack {
                     GradientBackground(color1: .mint, color2: .blue)
@@ -118,7 +117,6 @@ struct HomePage: View {
                     }
                 })
             }
-        }
         .sheet(isPresented: $showSheet, onDismiss: {
             Wallet.saveToFile(wallets)
             name = ""
