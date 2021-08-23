@@ -108,7 +108,7 @@ struct SavingsPage: View {
                             .cornerRadius(25)
                             .animation(.linear, value: 1)
                             .padding(.bottom, 30)
-                    } .shadow(color: .black.opacity(0.2), radius: 35), alignment: .bottom)
+                    } .shadow(color: .black.opacity(0.5), radius: 35), alignment: .bottom)
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Text("Total: $\(total, specifier: "%.2f")")

@@ -150,6 +150,8 @@ struct EditSheet3: View {
                     wallets.remove(at: editSheetIndex)
                     showEditSheet.toggle()
                 } .foregroundColor(.red)
+                Button("Cancel") {
+                } .foregroundColor(.blue)
             } .accentColor(.blue)
             
         }

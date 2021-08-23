@@ -126,11 +126,6 @@ struct ContentView: View {
                     .padding(.horizontal, 10)
                 .interactiveDismissDisabled(true)
             })
-        } .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                print("gamer time")
-                presentationMode.wrappedValue.dismiss()
-            })
         }
     }
 }
