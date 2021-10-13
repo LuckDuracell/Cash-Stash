@@ -63,6 +63,7 @@ struct EditPage: View {
                     .frame(width: UIScreen.main.bounds.width * 0.9, height: 50, alignment: .center)
                     .background(.gray.opacity(0.16))
                     .cornerRadius(10)
+                    .focused($showKeyboard)
                 
                 HStack {
                     Text("Amount:")
