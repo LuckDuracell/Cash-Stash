@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A55091826FE3F2100A78453 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55091726FE3F2100A78453 /* LoadingScreen.swift */; };
 		0A61288426B1156600098972 /* EditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288326B1156600098972 /* EditSheet.swift */; };
 		0A61288726B119AA00098972 /* EditSheet2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288626B119AA00098972 /* EditSheet2.swift */; };
 		0A61288926B119BA00098972 /* EditSheet3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288826B119BA00098972 /* EditSheet3.swift */; };
 		0A61288B26B11A6F00098972 /* NewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288A26B11A6F00098972 /* NewSheet.swift */; };
 		0A61288D26B11AD200098972 /* NewSheet2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288C26B11AD200098972 /* NewSheet2.swift */; };
 		0A61288F26B11AE700098972 /* NewSheet3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288E26B11AE700098972 /* NewSheet3.swift */; };
+		0AC925DC2710B36400F51646 /* ContentViewV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925DB2710B36400F51646 /* ContentViewV2.swift */; };
+		0AC925DE2710B38900F51646 /* CashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925DD2710B38900F51646 /* CashPage.swift */; };
+		0AC925E02710B3A600F51646 /* GiftPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925DF2710B3A600F51646 /* GiftPage.swift */; };
+		0AC925E22710B3AE00F51646 /* SavingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925E12710B3AE00F51646 /* SavingPage.swift */; };
+		0AC925E92710B9AC00F51646 /* StashItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925E82710B9AC00F51646 /* StashItem.swift */; };
+		0AC925EB2710BDE800F51646 /* EditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925EA2710BDE800F51646 /* EditPage.swift */; };
+		0AC925EE2710D69400F51646 /* NewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925ED2710D69400F51646 /* NewPage.swift */; };
 		0AD8DD0C26AE53FC00AC6C1E /* Cash_StashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD0B26AE53FC00AC6C1E /* Cash_StashApp.swift */; };
 		0AD8DD0E26AE53FC00AC6C1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */; };
 		0AD8DD1026AE53FD00AC6C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD8DD0F26AE53FD00AC6C1E /* Assets.xcassets */; };
@@ -45,12 +53,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A55091726FE3F2100A78453 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		0A61288326B1156600098972 /* EditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet.swift; sourceTree = "<group>"; };
 		0A61288626B119AA00098972 /* EditSheet2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet2.swift; sourceTree = "<group>"; };
 		0A61288826B119BA00098972 /* EditSheet3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet3.swift; sourceTree = "<group>"; };
 		0A61288A26B11A6F00098972 /* NewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet.swift; sourceTree = "<group>"; };
 		0A61288C26B11AD200098972 /* NewSheet2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet2.swift; sourceTree = "<group>"; };
 		0A61288E26B11AE700098972 /* NewSheet3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet3.swift; sourceTree = "<group>"; };
+		0AC925DB2710B36400F51646 /* ContentViewV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewV2.swift; sourceTree = "<group>"; };
+		0AC925DD2710B38900F51646 /* CashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashPage.swift; sourceTree = "<group>"; };
+		0AC925DF2710B3A600F51646 /* GiftPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPage.swift; sourceTree = "<group>"; };
+		0AC925E12710B3AE00F51646 /* SavingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingPage.swift; sourceTree = "<group>"; };
+		0AC925E82710B9AC00F51646 /* StashItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashItem.swift; sourceTree = "<group>"; };
+		0AC925EA2710BDE800F51646 /* EditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPage.swift; sourceTree = "<group>"; };
+		0AC925ED2710D69400F51646 /* NewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPage.swift; sourceTree = "<group>"; };
 		0AD8DD0826AE53FC00AC6C1E /* Cash Stash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cash Stash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD8DD0B26AE53FC00AC6C1E /* Cash_StashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash_StashApp.swift; sourceTree = "<group>"; };
 		0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +122,45 @@
 			path = Sheets;
 			sourceTree = "<group>";
 		};
+		0AC925E32710B3B500F51646 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AC925DD2710B38900F51646 /* CashPage.swift */,
+				0AC925DF2710B3A600F51646 /* GiftPage.swift */,
+				0AC925E12710B3AE00F51646 /* SavingPage.swift */,
+				0AC925EC2710BDF100F51646 /* SheetPages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0AC925E42710B3CB00F51646 /* Old and Ugly */ = {
+			isa = PBXGroup;
+			children = (
+				0A55091726FE3F2100A78453 /* LoadingScreen.swift */,
+				0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */,
+				0AD8DD4326AE944300AC6C1E /* Pages */,
+			);
+			path = "Old and Ugly";
+			sourceTree = "<group>";
+		};
+		0AC925E72710B91F00F51646 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */,
+				0AC925E82710B9AC00F51646 /* StashItem.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		0AC925EC2710BDF100F51646 /* SheetPages */ = {
+			isa = PBXGroup;
+			children = (
+				0AC925EA2710BDE800F51646 /* EditPage.swift */,
+				0AC925ED2710D69400F51646 /* NewPage.swift */,
+			);
+			path = SheetPages;
+			sourceTree = "<group>";
+		};
 		0AD8DCFF26AE53FC00AC6C1E = {
 			isa = PBXGroup;
 			children = (
@@ -130,10 +185,11 @@
 			isa = PBXGroup;
 			children = (
 				0AD8DD0B26AE53FC00AC6C1E /* Cash_StashApp.swift */,
-				0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */,
-				0AD8DD4326AE944300AC6C1E /* Pages */,
+				0AC925DB2710B36400F51646 /* ContentViewV2.swift */,
+				0AC925E72710B91F00F51646 /* Structs */,
+				0AC925E32710B3B500F51646 /* Views */,
+				0AC925E42710B3CB00F51646 /* Old and Ugly */,
 				0AD8DD3E26AE5BB200AC6C1E /* PersistanceData.swift */,
-				0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */,
 				0AD8DD0F26AE53FD00AC6C1E /* Assets.xcassets */,
 				0AD8DD1126AE53FD00AC6C1E /* Preview Content */,
 			);
@@ -315,12 +371,20 @@
 				0AD8DD3926AE542B00AC6C1E /* HomePage.swift in Sources */,
 				0A61288926B119BA00098972 /* EditSheet3.swift in Sources */,
 				0AD8DD4526AE945E00AC6C1E /* GiftcardsPage.swift in Sources */,
+				0A55091826FE3F2100A78453 /* LoadingScreen.swift in Sources */,
 				0A61288426B1156600098972 /* EditSheet.swift in Sources */,
+				0AC925DE2710B38900F51646 /* CashPage.swift in Sources */,
 				0AD8DD0E26AE53FC00AC6C1E /* ContentView.swift in Sources */,
+				0AC925EE2710D69400F51646 /* NewPage.swift in Sources */,
 				0AD8DD4726AE951F00AC6C1E /* SavingsPage.swift in Sources */,
+				0AC925E02710B3A600F51646 /* GiftPage.swift in Sources */,
 				0AD8DD0C26AE53FC00AC6C1E /* Cash_StashApp.swift in Sources */,
+				0AC925E92710B9AC00F51646 /* StashItem.swift in Sources */,
 				0AD8DD3B26AE548900AC6C1E /* GradientBackground.swift in Sources */,
 				0A61288726B119AA00098972 /* EditSheet2.swift in Sources */,
+				0AC925EB2710BDE800F51646 /* EditPage.swift in Sources */,
+				0AC925DC2710B36400F51646 /* ContentViewV2.swift in Sources */,
+				0AC925E22710B3AE00F51646 /* SavingPage.swift in Sources */,
 				0AD8DD4926AEA14500AC6C1E /* TotalsPage.swift in Sources */,
 				0A61288F26B11AE700098972 /* NewSheet3.swift in Sources */,
 				0A61288D26B11AD200098972 /* NewSheet2.swift in Sources */,

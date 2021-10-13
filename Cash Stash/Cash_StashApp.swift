@@ -11,7 +11,21 @@ import SwiftUI
 struct Cash_StashApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentViewV2()
         }
+    }
+}
+
+extension UITabBarController {
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let standardAppearance = UITabBarAppearance()
+
+        standardAppearance.backgroundColor = .red
+        standardAppearance.shadowColor = .green
+
+        standardAppearance.configureWithOpaqueBackground()
+        
+        tabBar.standardAppearance = standardAppearance
     }
 }

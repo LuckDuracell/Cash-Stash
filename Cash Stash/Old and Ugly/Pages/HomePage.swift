@@ -26,6 +26,9 @@ struct HomePage: View {
             .paragraphStyle: paragraphStyle
         ]
         
+        let tabAppearance = UITabBarAppearance()
+        tabAppearance.selectionIndicatorTintColor = .blue
+        
         //Clear List Background
         UITableView.appearance().backgroundColor = .clear
     }
@@ -95,6 +98,35 @@ struct HomePage: View {
                         }
                     })
                 }
+                .toolbar(content: {
+                    ToolbarItem(placement: .keyboard, content: {
+                        HStack() {
+                            Button {
+                                amount = "\(amount)+"
+                                print("plus")
+                            } label: {
+                                Image(systemName: "plus")
+                                    .foregroundColor(.blue)
+                            }
+                            Button {
+                                amount = "\(amount)-"
+                                print("minus")
+                            } label: {
+                                Image(systemName: "minus")
+                                    .foregroundColor(.blue)
+                            }
+                            Spacer()
+                            Button {
+                                showKeyboard = false
+                                print(showKeyboard)
+                            } label: {
+                                Text("Done")
+                                    .multilineTextAlignment(.trailing)
+                                    .foregroundColor(.blue)
+                            }
+                        }
+                    })
+                })
                 .navigationTitle("Cash Stash")
                 .overlay(
                     Button {
@@ -115,62 +147,37 @@ struct HomePage: View {
                             .frame(width: UIScreen.main.bounds.width * 0.5, alignment: .leading)
                     }
                 })
-               }
-        .sheet(isPresented: $showSheet, onDismiss: {
-            Wallet.saveToFile(wallets)
-            name = ""
-            icon = "dollarsign.circle.fill"
-            amount = ""
-            showEditSheet = false
-            total = 0
-            for i in wallets.indices {
-                total += wallets[i].amount
-            }
-        }, content: {
-            NewSheet(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showSheet: $showSheet, wallets: $wallets, showKeyboard: _showKeyboard)
-        })
-        .sheet(isPresented: $showEditSheet, onDismiss: {
-            Wallet.saveToFile(wallets)
-            name = ""
-            icon = "dollarsign.circle.fill"
-            amount = ""
-            showEditSheet = false
-            total = 0
-            for i in wallets.indices {
-                total += wallets[i].amount
-            }
-        }, content: {
-            EditSheet(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showEditSheet: $showEditSheet, wallets: $wallets, showKeyboard: _showKeyboard)
-        })
-        .toolbar(content: {
-            ToolbarItem(placement: .keyboard, content: {
-                HStack() {
-                    Button {
-                        amount = "\(amount)+"
-                        print("plus")
-                    } label: {
-                        Image(systemName: "plus")
-                            .foregroundColor(.blue)
+                .sheet(isPresented: $showSheet, onDismiss: {
+                    Wallet.saveToFile(wallets)
+                    name = ""
+                    icon = "dollarsign.circle.fill"
+                    amount = ""
+                    showEditSheet = false
+                    total = 0
+                    for i in wallets.indices {
+                        total += wallets[i].amount
                     }
-                    Button {
-                        amount = "\(amount)-"
-                        print("minus")
-                    } label: {
-                        Image(systemName: "minus")
-                            .foregroundColor(.blue)
-                    }
-                    Spacer()
-                    Button {
-                        showKeyboard = false
-                        print(showKeyboard)
-                    } label: {
-                        Text("Done")
-                            .multilineTextAlignment(.trailing)
-                            .foregroundColor(.blue)
-                    }
-                }
+            }, content: {
+                NewSheet(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showSheet: $showSheet, wallets: $wallets, showKeyboard: _showKeyboard)
             })
-        })
+            .sheet(isPresented: $showEditSheet, onDismiss: {
+                Wallet.saveToFile(wallets)
+                name = ""
+                icon = "dollarsign.circle.fill"
+                amount = ""
+                showEditSheet = false
+                total = 0
+                for i in wallets.indices {
+                    total += wallets[i].amount
+                }
+            }, content: {
+                EditSheet(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showEditSheet: $showEditSheet, wallets: $wallets, showKeyboard: _showKeyboard)
+            })
+            .onAppear(perform: {
+                let tabAppearance = UITabBarAppearance()
+                tabAppearance.selectionIndicatorTintColor = .blue
+            })
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 //
-//  GiftcardsPage.swift
-//  GiftcardsPage
+//  SavingsPage.swift
+//  SavingsPage
 //
 //  Created by Luke Drushell on 7/25/21.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 
 import CoreData
 
-struct GiftcardsPage: View {
+struct SavingsPage: View {
     
     init() {
         //Make "Cash Stash title into white text"
@@ -26,21 +26,25 @@ struct GiftcardsPage: View {
             .paragraphStyle: paragraphStyle
         ]
         
+        let tabAppearance = UITabBarAppearance()
+        tabAppearance.selectionIndicatorTintColor = .orange
+        
         //Clear List Background
         UITableView.appearance().backgroundColor = .clear
+
     }
     
-    @State private var wallets = Wallet2.loadFromFile()
+    @State private var wallets = Wallet3.loadFromFile()
     
     @State var showDeleteAlert = false
     @State var showSheet = false
     @State var showEditSheet = false
     @State var editSheetIndex = 0
     
-    @State var color: Color = Color.purple
+    @State var color: Color = Color.orange
     
     @State var name = ""
-    @State var icon = "cart.circle.fill"
+    @State var icon = "dollarsign.circle.fill"
     @State var amount = ""
     
     @FocusState var showKeyboard: Bool
@@ -50,13 +54,13 @@ struct GiftcardsPage: View {
     var body: some View {
             NavigationView {
                 ZStack {
-                    GradientBackground(color1: .pink, color2: .purple)
+                    GradientBackground(color1: .yellow, color2: .orange)
                     List {
                         ForEach(wallets.indices, id: \.self, content: { index in
                             HStack {
                                 Image(systemName: wallets[index].icon)
                                     .resizable()
-                                    .foregroundColor(.purple)
+                                    .foregroundColor(.orange)
                                     .scaledToFill()
                                     .frame(width: 30, height: 30, alignment: .center)
                                     .padding(.leading, 5)
@@ -81,7 +85,7 @@ struct GiftcardsPage: View {
                         })
                         .onDelete(perform: { index in
                             wallets.remove(atOffsets: index)
-                            Wallet2.saveToFile(wallets)
+                            Wallet3.saveToFile(wallets)
                             total = 0
                             for i in wallets.indices {
                                 total += wallets[i].amount
@@ -95,13 +99,17 @@ struct GiftcardsPage: View {
                         }
                     })
                 }
-                .navigationTitle("Giftcards Stash")
+                .onAppear(perform: {
+                    let tabAppearance = UITabBarAppearance()
+                    tabAppearance.selectionIndicatorTintColor = .orange
+                })
+                .navigationTitle("Savings Stash")
                 .overlay(
                     Button {
                         showSheet.toggle()
                     } label: {
                         Text("Add Stash")
-                            .foregroundColor(.purple)
+                            .foregroundColor(.orange)
                             .padding()
                             .frame(width: 250, height: 50, alignment: .center)
                             .background(Color.white)
@@ -118,9 +126,9 @@ struct GiftcardsPage: View {
                 })
             }
         .sheet(isPresented: $showSheet, onDismiss: {
-            Wallet2.saveToFile(wallets)
+            Wallet3.saveToFile(wallets)
             name = ""
-            icon = "cart.circle.fill"
+            icon = "dollarsign.circle.fill"
             amount = ""
             showEditSheet = false
             total = 0
@@ -128,12 +136,12 @@ struct GiftcardsPage: View {
                 total += wallets[i].amount
             }
         }, content: {
-            NewSheet2(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showSheet: $showSheet, wallets: $wallets, showKeyboard: _showKeyboard)
+            NewSheet3(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showSheet: $showSheet, wallets: $wallets, showKeyboard: _showKeyboard)
         })
         .sheet(isPresented: $showEditSheet, onDismiss: {
-            Wallet2.saveToFile(wallets)
+            Wallet3.saveToFile(wallets)
             name = ""
-            icon = "cart.circle.fill"
+            icon = "dollarsign.circle.fill"
             amount = ""
             showEditSheet = false
             total = 0
@@ -141,7 +149,7 @@ struct GiftcardsPage: View {
                 total += wallets[i].amount
             }
         }, content: {
-            EditSheet2(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showEditSheet: $showEditSheet, wallets: $wallets, showKeyboard: _showKeyboard)
+            EditSheet3(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showEditSheet: $showEditSheet, wallets: $wallets, showKeyboard: _showKeyboard)
         })
         .toolbar(content: {
             ToolbarItem(placement: .keyboard, content: {
@@ -151,14 +159,14 @@ struct GiftcardsPage: View {
                         print("plus")
                     } label: {
                         Image(systemName: "plus")
-                            .foregroundColor(.purple)
+                            .foregroundColor(.orange)
                     }
                     Button {
                         amount = "\(amount)-"
                         print("minus")
                     } label: {
                         Image(systemName: "minus")
-                            .foregroundColor(.purple)
+                            .foregroundColor(.orange)
                     }
                     Spacer()
                     Button {
@@ -167,7 +175,7 @@ struct GiftcardsPage: View {
                     } label: {
                         Text("Done")
                             .multilineTextAlignment(.trailing)
-                            .foregroundColor(.purple)
+                            .foregroundColor(.orange)
                     }
                 }
             })
@@ -175,8 +183,9 @@ struct GiftcardsPage: View {
     }
 }
 
-struct GiftcardsPage_Previews: PreviewProvider {
+struct SavingsPage_Previews: PreviewProvider {
     static var previews: some View {
-        GiftcardsPage()
+        SavingsPage()
     }
 }
+

@@ -9,28 +9,53 @@ import SwiftUI
 import CoreData
 
 
+
+
 struct ContentView: View {
 
     @State var showWelcome = false
     @Environment(\.presentationMode) var presentationMode
+    @State var pageView = 1
+    
+    @State var typePages = false
+    
+    init() {
+        let tabAppearance = UITabBar.appearance()
+        tabAppearance.backgroundImage = UIImage(named: "backgroundTab")
+    }
     
     var body: some View {
         ZStack {
             TabView {
                 HomePage()
+                    .environment(\.tintColor, Color.blue)
+                    .tabItem {
+                        Label("Cash", systemImage: "dollarsign.circle.fill")
+                    }
                 GiftcardsPage()
+                    .environment(\.tintColor, Color.purple)
+                    .tabItem {
+                        Label("Giftcards", systemImage: "giftcard.fill")
+                    }
                 SavingsPage()
-                //TotalsPage()
+                    .environment(\.tintColor, Color.orange)
+                    .tabItem {
+                        Label("Savings", systemImage: "building.columns.fill")
+                    }
             }
-            .tabViewStyle(.page)
-            .edgesIgnoringSafeArea(.all)
+            .onAppear(perform: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                    typePages = true
+                })
+            })
+        }
+            //.tabViewStyle(.page)
             .onAppear(perform: {
                 if isFirstTimeOpening() {
                     showWelcome = true
                 }
             })
             .sheet(isPresented: $showWelcome, onDismiss: {
-                
             }, content: {
                 VStack {
                     VStack {
@@ -122,11 +147,10 @@ struct ContentView: View {
                             .cornerRadius(25)
                             .padding()
                     }
-                } .padding(.top, 70)
+                }
                     .padding(.horizontal, 10)
                 .interactiveDismissDisabled(true)
             })
-        }
     }
 }
 
@@ -152,5 +176,17 @@ struct ViewOffsetKey: PreferenceKey {
     static var defaultValue = CGFloat.zero
     static func reduce(value: inout Value, nextValue: () -> Value) {
         value += nextValue()
+    }
+}
+
+
+private struct TintKey: EnvironmentKey {
+    static let defaultValue: Color = Color.blue
+}
+
+extension EnvironmentValues {
+    var tintColor: Color {
+        get { self[TintKey.self] }
+        set { self[TintKey.self] = newValue }
     }
 }

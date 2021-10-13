@@ -1,6 +1,6 @@
 //
-//  SavingsPage.swift
-//  SavingsPage
+//  GiftcardsPage.swift
+//  GiftcardsPage
 //
 //  Created by Luke Drushell on 7/25/21.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 
 import CoreData
 
-struct SavingsPage: View {
+struct GiftcardsPage: View {
     
     init() {
         //Make "Cash Stash title into white text"
@@ -26,21 +26,24 @@ struct SavingsPage: View {
             .paragraphStyle: paragraphStyle
         ]
         
+        let tabAppearance = UITabBarAppearance()
+        tabAppearance.selectionIndicatorTintColor = .purple
+        
         //Clear List Background
         UITableView.appearance().backgroundColor = .clear
     }
     
-    @State private var wallets = Wallet3.loadFromFile()
+    @State private var wallets = Wallet2.loadFromFile()
     
     @State var showDeleteAlert = false
     @State var showSheet = false
     @State var showEditSheet = false
     @State var editSheetIndex = 0
     
-    @State var color: Color = Color.orange
+    @State var color: Color = Color.purple
     
     @State var name = ""
-    @State var icon = "dollarsign.circle.fill"
+    @State var icon = "cart.circle.fill"
     @State var amount = ""
     
     @FocusState var showKeyboard: Bool
@@ -50,13 +53,13 @@ struct SavingsPage: View {
     var body: some View {
             NavigationView {
                 ZStack {
-                    GradientBackground(color1: .yellow, color2: .orange)
+                    GradientBackground(color1: .pink, color2: .purple)
                     List {
                         ForEach(wallets.indices, id: \.self, content: { index in
                             HStack {
                                 Image(systemName: wallets[index].icon)
                                     .resizable()
-                                    .foregroundColor(.orange)
+                                    .foregroundColor(.purple)
                                     .scaledToFill()
                                     .frame(width: 30, height: 30, alignment: .center)
                                     .padding(.leading, 5)
@@ -81,7 +84,7 @@ struct SavingsPage: View {
                         })
                         .onDelete(perform: { index in
                             wallets.remove(atOffsets: index)
-                            Wallet3.saveToFile(wallets)
+                            Wallet2.saveToFile(wallets)
                             total = 0
                             for i in wallets.indices {
                                 total += wallets[i].amount
@@ -95,13 +98,13 @@ struct SavingsPage: View {
                         }
                     })
                 }
-                .navigationTitle("Savings Stash")
+                .navigationTitle("Giftcards Stash")
                 .overlay(
                     Button {
                         showSheet.toggle()
                     } label: {
                         Text("Add Stash")
-                            .foregroundColor(.orange)
+                            .foregroundColor(.purple)
                             .padding()
                             .frame(width: 250, height: 50, alignment: .center)
                             .background(Color.white)
@@ -115,12 +118,43 @@ struct SavingsPage: View {
                             .foregroundColor(Color("opposite"))
                             .frame(width: UIScreen.main.bounds.width * 0.5, alignment: .leading)
                     }
+                    ToolbarItem(placement: .keyboard, content: {
+                        HStack() {
+                            Button {
+                                amount = "\(amount)+"
+                                print("plus")
+                            } label: {
+                                Image(systemName: "plus")
+                                    .foregroundColor(.blue)
+                            }
+                            Button {
+                                amount = "\(amount)-"
+                                print("minus")
+                            } label: {
+                                Image(systemName: "minus")
+                                    .foregroundColor(.blue)
+                            }
+                            Spacer()
+                            Button {
+                                showKeyboard = false
+                                print(showKeyboard)
+                            } label: {
+                                Text("Done")
+                                    .multilineTextAlignment(.trailing)
+                                    .foregroundColor(.blue)
+                            }
+                        }
+                    })
                 })
             }
+            .onAppear(perform: {
+                let tabAppearance = UITabBarAppearance()
+                tabAppearance.selectionIndicatorTintColor = .purple
+            })
         .sheet(isPresented: $showSheet, onDismiss: {
-            Wallet3.saveToFile(wallets)
+            Wallet2.saveToFile(wallets)
             name = ""
-            icon = "dollarsign.circle.fill"
+            icon = "cart.circle.fill"
             amount = ""
             showEditSheet = false
             total = 0
@@ -128,12 +162,12 @@ struct SavingsPage: View {
                 total += wallets[i].amount
             }
         }, content: {
-            NewSheet3(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showSheet: $showSheet, wallets: $wallets, showKeyboard: _showKeyboard)
+            NewSheet2(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showSheet: $showSheet, wallets: $wallets, showKeyboard: _showKeyboard)
         })
         .sheet(isPresented: $showEditSheet, onDismiss: {
-            Wallet3.saveToFile(wallets)
+            Wallet2.saveToFile(wallets)
             name = ""
-            icon = "dollarsign.circle.fill"
+            icon = "cart.circle.fill"
             amount = ""
             showEditSheet = false
             total = 0
@@ -141,42 +175,13 @@ struct SavingsPage: View {
                 total += wallets[i].amount
             }
         }, content: {
-            EditSheet3(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showEditSheet: $showEditSheet, wallets: $wallets, showKeyboard: _showKeyboard)
-        })
-        .toolbar(content: {
-            ToolbarItem(placement: .keyboard, content: {
-                HStack() {
-                    Button {
-                        amount = "\(amount)+"
-                        print("plus")
-                    } label: {
-                        Image(systemName: "plus")
-                            .foregroundColor(.orange)
-                    }
-                    Button {
-                        amount = "\(amount)-"
-                        print("minus")
-                    } label: {
-                        Image(systemName: "minus")
-                            .foregroundColor(.orange)
-                    }
-                    Spacer()
-                    Button {
-                        showKeyboard = false
-                        print(showKeyboard)
-                    } label: {
-                        Text("Done")
-                            .multilineTextAlignment(.trailing)
-                            .foregroundColor(.orange)
-                    }
-                }
-            })
+            EditSheet2(color: $color, icon: $icon, amount: $amount, name: $name, editSheetIndex: $editSheetIndex, showEditSheet: $showEditSheet, wallets: $wallets, showKeyboard: _showKeyboard)
         })
     }
 }
 
-struct SavingsPage_Previews: PreviewProvider {
+struct GiftcardsPage_Previews: PreviewProvider {
     static var previews: some View {
-        SavingsPage()
+        GiftcardsPage()
     }
 }
