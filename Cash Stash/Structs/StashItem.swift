@@ -27,6 +27,7 @@ struct StashItem: View {
             Text(name)
                 .padding(.leading, 10)
                 .foregroundColor(.black)
+                .lineLimit(1)
             Spacer()
             Text("$\(amount, specifier: "%.2f")")
                 .padding(.trailing)

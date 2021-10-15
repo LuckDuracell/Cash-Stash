@@ -16,7 +16,7 @@ struct CashPage: View {
     @State var pageIndex = 0
     @FocusState var showKeyboard: Bool
     
-    @State var amountString = "$0.00"
+    @State var amountString = "0.00"
     
     @State var reloadPage = false
     

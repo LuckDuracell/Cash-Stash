@@ -18,7 +18,7 @@ struct NewPage: View {
     @State private var wallet3 = Wallet3.loadFromFile()
     
     @State var type = "Cash"
-    @State var types = ["Cash", "Card", "Crypto", "Stocks"]
+    @State var types = ["Cash", "Card", "Crypto", "Stocks", "Coins"]
     @State var amountString = "0.00"
     
     @FocusState var showKeyboard: Bool
@@ -89,6 +89,8 @@ struct NewPage: View {
                         icon = "bitcoinsign.circle.fill"
                     case "Stocks":
                         icon = "chart.pie.fill"
+                    case "Coins":
+                        icon = "centsign.circle.fill"
                     default:
                         icon = "dollarsign.circle.fill"
                     }
@@ -133,6 +135,8 @@ struct NewPage: View {
                     type = "Crypto"
                 case "chart.pie.fill":
                     type = "Stocks"
+                case "centsign.circle.fill":
+                    type = "Coins"
                 default:
                     type = "Cash"
                 }
