@@ -16,11 +16,13 @@ struct GiftPage: View {
     @State var pageIndex = 0
     @FocusState var showKeyboard: Bool
     
-    @State var amountString = "0.00"
+    @Binding var amountString: String
     
     @State var reloadPage = false
     
     @State var total: Double = 0
+    
+    @Binding var toolbarColor: Color
     
     var body: some View {
         ZStack {
@@ -74,6 +76,8 @@ struct GiftPage: View {
             })
         }
         .onAppear(perform: {
+            toolbarColor = .purple
+            amountString = "0.00"
             total = 0
             for i in wallets.indices {
                 total += wallets[i].amount
@@ -86,46 +90,26 @@ struct GiftPage: View {
 //            wallets[pageIndex].icon = newData[pageIndex].icon
 //            wallets[pageIndex].name = newData[pageIndex].name
                 wallets = newData
+                total = 0
+                for i in wallets.indices {
+                    total += wallets[i].amount
+                }
             } else {
                 wallets = newData
+                total = 0
+                for i in wallets.indices {
+                    total += wallets[i].amount
+                }
                 
             }
         }, content: {
             EditPage(icon: $selection.icon, name: $selection.name, amount: $selection.amount, index: $pageIndex, amountString: $amountString, showKeyboard: _showKeyboard, showSheet: $showSheet, stashType: .constant(2))
         })
-            .toolbar(content: {
-                ToolbarItem(placement: .keyboard, content: {
-                    HStack() {
-                        Button {
-                            amountString = "\(amountString)+"
-                            print("plus")
-                        } label: {
-                            Image(systemName: "plus")
-                                .foregroundColor(.purple)
-                        }
-                        Button {
-                            amountString = "\(amountString)-"
-                            print("minus")
-                        } label: {
-                            Image(systemName: "minus")
-                                .foregroundColor(.purple)
-                        }
-                        Spacer()
-                        Button {
-                            showKeyboard = false
-                        } label: {
-                            Text("Done")
-                                .multilineTextAlignment(.trailing)
-                                .foregroundColor(.purple)
-                        }
-                    }
-                })
-            })
     }
 }
 
-struct GiftPage_Previews: PreviewProvider {
-    static var previews: some View {
-        GiftPage()
-    }
-}
+//struct GiftPage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GiftPage()
+//    }
+//}

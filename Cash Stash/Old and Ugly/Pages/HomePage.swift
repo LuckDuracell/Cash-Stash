@@ -103,14 +103,12 @@ struct HomePage: View {
                         HStack() {
                             Button {
                                 amount = "\(amount)+"
-                                print("plus")
                             } label: {
                                 Image(systemName: "plus")
                                     .foregroundColor(.blue)
                             }
                             Button {
                                 amount = "\(amount)-"
-                                print("minus")
                             } label: {
                                 Image(systemName: "minus")
                                     .foregroundColor(.blue)
@@ -118,7 +116,6 @@ struct HomePage: View {
                             Spacer()
                             Button {
                                 showKeyboard = false
-                                print(showKeyboard)
                             } label: {
                                 Text("Done")
                                     .multilineTextAlignment(.trailing)

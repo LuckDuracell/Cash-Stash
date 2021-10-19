@@ -122,14 +122,12 @@ struct GiftcardsPage: View {
                         HStack() {
                             Button {
                                 amount = "\(amount)+"
-                                print("plus")
                             } label: {
                                 Image(systemName: "plus")
                                     .foregroundColor(.blue)
                             }
                             Button {
                                 amount = "\(amount)-"
-                                print("minus")
                             } label: {
                                 Image(systemName: "minus")
                                     .foregroundColor(.blue)
@@ -137,7 +135,6 @@ struct GiftcardsPage: View {
                             Spacer()
                             Button {
                                 showKeyboard = false
-                                print(showKeyboard)
                             } label: {
                                 Text("Done")
                                     .multilineTextAlignment(.trailing)

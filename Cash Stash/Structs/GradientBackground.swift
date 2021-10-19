@@ -11,13 +11,12 @@ struct GradientBackground: View {
     let color1: Color
     let color2: Color
     
-    
     var body: some View {
         ZStack {
             LinearGradient(colors: [color1, color2], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
 //                .overlay(alignment: .bottom, content: {
-//                    LinearGradient(colors: [.black.opacity(0.6), .black.opacity(0)], startPoint: .bottom, endPoint: .center)
+//                    LinearGradient(colors: [.black.opacity(0.3), .black.opacity(0)], startPoint: .bottom, endPoint: .center)
 //                })
         }
     }
