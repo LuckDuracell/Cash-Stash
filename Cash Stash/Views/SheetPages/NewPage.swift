@@ -13,6 +13,8 @@ struct NewPage: View {
     @State var name = "New Item"
     @State var amount = 0
     
+    @State var subscriptions = UserSubscriptions.loadFromFile()
+    
     @State private var wallet = Wallet.loadFromFile()
     @State private var wallet2 = Wallet2.loadFromFile()
     @State private var wallet3 = Wallet3.loadFromFile()
@@ -105,12 +107,30 @@ struct NewPage: View {
                     switch stashType {
                     case 1:
                         wallet.insert(Wallet(name: name, icon: icon, amount: amount), at: 0)
+                        for index in subscriptions.indices {
+                            if subscriptions[index].wallet == 1 {
+                                subscriptions[index].indexNum += 1
+                            }
+                        }
+                        UserSubscriptions.saveToFile(subscriptions)
                         Wallet.saveToFile(wallet)
                     case 2:
                         wallet2.insert(Wallet2(name: name, icon: icon, amount: amount), at: 0)
+                        for index in subscriptions.indices {
+                            if subscriptions[index].wallet == 2 {
+                                subscriptions[index].indexNum += 1
+                            }
+                        }
+                        UserSubscriptions.saveToFile(subscriptions)
                         Wallet2.saveToFile(wallet2)
                     default:
                         wallet3.insert(Wallet3(name: name, icon: icon, amount: amount), at: 0)
+                        for index in subscriptions.indices {
+                            if subscriptions[index].wallet == 3 {
+                                subscriptions[index].indexNum += 1
+                            }
+                        }
+                        UserSubscriptions.saveToFile(subscriptions)
                         Wallet3.saveToFile(wallet3)
                     }
                     showSheet = false
@@ -155,5 +175,3 @@ struct NewPage: View {
         }
     }
 }
-
-

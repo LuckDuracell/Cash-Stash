@@ -36,6 +36,21 @@ struct Wallet3: Hashable, Codable, LocalFileStorable {
     var amount: Double
 }
 
+struct UserSubscriptions: Hashable, Codable, LocalFileStorable {
+    static var fileName: String {
+        return "UserSubscriptions"
+    }
+    var subscriptionName: String
+    var amount: Double
+    var wallet: Int
+    var indexNum: Int
+    var frequency: String
+    var updated: Date
+    var latestCharge: Date
+    var timesCharged: Int
+    var expense: Bool
+}
+
 protocol LocalFilesStorable: Codable {
     static var fileName: String { get }
 }

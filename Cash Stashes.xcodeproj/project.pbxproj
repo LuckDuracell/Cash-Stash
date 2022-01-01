@@ -14,6 +14,10 @@
 		0A61288B26B11A6F00098972 /* NewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288A26B11A6F00098972 /* NewSheet.swift */; };
 		0A61288D26B11AD200098972 /* NewSheet2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288C26B11AD200098972 /* NewSheet2.swift */; };
 		0A61288F26B11AE700098972 /* NewSheet3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A61288E26B11AE700098972 /* NewSheet3.swift */; };
+		0AA93E7B2779D221001A00D1 /* SubscriptionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA93E7A2779D221001A00D1 /* SubscriptionsPage.swift */; };
+		0AA93E7D2779D3CB001A00D1 /* NewSubPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA93E7C2779D3CB001A00D1 /* NewSubPage.swift */; };
+		0AA93E7F2779D3D1001A00D1 /* EditSubPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA93E7E2779D3D1001A00D1 /* EditSubPage.swift */; };
+		0AA93E812779DE22001A00D1 /* SubscriptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA93E802779DE22001A00D1 /* SubscriptionItem.swift */; };
 		0AC925DC2710B36400F51646 /* ContentViewV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925DB2710B36400F51646 /* ContentViewV2.swift */; };
 		0AC925DE2710B38900F51646 /* CashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925DD2710B38900F51646 /* CashPage.swift */; };
 		0AC925E02710B3A600F51646 /* GiftPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC925DF2710B3A600F51646 /* GiftPage.swift */; };
@@ -53,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A392588272348F100A0146F /* Cash-Stashes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Cash-Stashes-Info.plist"; sourceTree = "<group>"; };
 		0A55091726FE3F2100A78453 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		0A61288326B1156600098972 /* EditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet.swift; sourceTree = "<group>"; };
 		0A61288626B119AA00098972 /* EditSheet2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSheet2.swift; sourceTree = "<group>"; };
@@ -60,6 +65,10 @@
 		0A61288A26B11A6F00098972 /* NewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet.swift; sourceTree = "<group>"; };
 		0A61288C26B11AD200098972 /* NewSheet2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet2.swift; sourceTree = "<group>"; };
 		0A61288E26B11AE700098972 /* NewSheet3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheet3.swift; sourceTree = "<group>"; };
+		0AA93E7A2779D221001A00D1 /* SubscriptionsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsPage.swift; sourceTree = "<group>"; };
+		0AA93E7C2779D3CB001A00D1 /* NewSubPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubPage.swift; sourceTree = "<group>"; };
+		0AA93E7E2779D3D1001A00D1 /* EditSubPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSubPage.swift; sourceTree = "<group>"; };
+		0AA93E802779DE22001A00D1 /* SubscriptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionItem.swift; sourceTree = "<group>"; };
 		0AC925DB2710B36400F51646 /* ContentViewV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewV2.swift; sourceTree = "<group>"; };
 		0AC925DD2710B38900F51646 /* CashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashPage.swift; sourceTree = "<group>"; };
 		0AC925DF2710B3A600F51646 /* GiftPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPage.swift; sourceTree = "<group>"; };
@@ -72,9 +81,9 @@
 		0AD8DD0D26AE53FC00AC6C1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AD8DD0F26AE53FD00AC6C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AD8DD1226AE53FD00AC6C1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0AD8DD1D26AE53FD00AC6C1E /* Cash StashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cash StashTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD8DD1D26AE53FD00AC6C1E /* Cash StashesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cash StashesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD8DD2126AE53FD00AC6C1E /* Cash_StashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash_StashTests.swift; sourceTree = "<group>"; };
-		0AD8DD2726AE53FD00AC6C1E /* Cash StashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cash StashUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD8DD2726AE53FD00AC6C1E /* Cash StashesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cash StashesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD8DD2B26AE53FD00AC6C1E /* Cash_StashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash_StashUITests.swift; sourceTree = "<group>"; };
 		0AD8DD3826AE542B00AC6C1E /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
@@ -125,6 +134,7 @@
 		0AC925E32710B3B500F51646 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0AA93E7A2779D221001A00D1 /* SubscriptionsPage.swift */,
 				0AC925DD2710B38900F51646 /* CashPage.swift */,
 				0AC925DF2710B3A600F51646 /* GiftPage.swift */,
 				0AC925E12710B3AE00F51646 /* SavingPage.swift */,
@@ -148,6 +158,7 @@
 			children = (
 				0AD8DD3A26AE548900AC6C1E /* GradientBackground.swift */,
 				0AC925E82710B9AC00F51646 /* StashItem.swift */,
+				0AA93E802779DE22001A00D1 /* SubscriptionItem.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -157,6 +168,8 @@
 			children = (
 				0AC925EA2710BDE800F51646 /* EditPage.swift */,
 				0AC925ED2710D69400F51646 /* NewPage.swift */,
+				0AA93E7C2779D3CB001A00D1 /* NewSubPage.swift */,
+				0AA93E7E2779D3D1001A00D1 /* EditSubPage.swift */,
 			);
 			path = SheetPages;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 		0AD8DCFF26AE53FC00AC6C1E = {
 			isa = PBXGroup;
 			children = (
+				0A392588272348F100A0146F /* Cash-Stashes-Info.plist */,
 				0AD8DD0A26AE53FC00AC6C1E /* Cash Stash */,
 				0AD8DD2026AE53FD00AC6C1E /* Cash StashTests */,
 				0AD8DD2A26AE53FD00AC6C1E /* Cash StashUITests */,
@@ -175,8 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				0AD8DD0826AE53FC00AC6C1E /* Cash Stash.app */,
-				0AD8DD1D26AE53FD00AC6C1E /* Cash StashTests.xctest */,
-				0AD8DD2726AE53FD00AC6C1E /* Cash StashUITests.xctest */,
+				0AD8DD1D26AE53FD00AC6C1E /* Cash StashesTests.xctest */,
+				0AD8DD2726AE53FD00AC6C1E /* Cash StashesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0AD8DD0726AE53FC00AC6C1E /* Cash Stash */ = {
+		0AD8DD0726AE53FC00AC6C1E /* Cash Stashes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AD8DD2F26AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash Stash" */;
+			buildConfigurationList = 0AD8DD2F26AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash Stashes" */;
 			buildPhases = (
 				0AD8DD0426AE53FC00AC6C1E /* Sources */,
 				0AD8DD0526AE53FC00AC6C1E /* Frameworks */,
@@ -247,16 +261,16 @@
 			);
 			dependencies = (
 			);
-			name = "Cash Stash";
+			name = "Cash Stashes";
 			packageProductDependencies = (
 			);
 			productName = "Cash Stash";
 			productReference = 0AD8DD0826AE53FC00AC6C1E /* Cash Stash.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0AD8DD1C26AE53FD00AC6C1E /* Cash StashTests */ = {
+		0AD8DD1C26AE53FD00AC6C1E /* Cash StashesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AD8DD3226AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash StashTests" */;
+			buildConfigurationList = 0AD8DD3226AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash StashesTests" */;
 			buildPhases = (
 				0AD8DD1926AE53FD00AC6C1E /* Sources */,
 				0AD8DD1A26AE53FD00AC6C1E /* Frameworks */,
@@ -267,14 +281,14 @@
 			dependencies = (
 				0AD8DD1F26AE53FD00AC6C1E /* PBXTargetDependency */,
 			);
-			name = "Cash StashTests";
+			name = "Cash StashesTests";
 			productName = "Cash StashTests";
-			productReference = 0AD8DD1D26AE53FD00AC6C1E /* Cash StashTests.xctest */;
+			productReference = 0AD8DD1D26AE53FD00AC6C1E /* Cash StashesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0AD8DD2626AE53FD00AC6C1E /* Cash StashUITests */ = {
+		0AD8DD2626AE53FD00AC6C1E /* Cash StashesUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AD8DD3526AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash StashUITests" */;
+			buildConfigurationList = 0AD8DD3526AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash StashesUITests" */;
 			buildPhases = (
 				0AD8DD2326AE53FD00AC6C1E /* Sources */,
 				0AD8DD2426AE53FD00AC6C1E /* Frameworks */,
@@ -285,9 +299,9 @@
 			dependencies = (
 				0AD8DD2926AE53FD00AC6C1E /* PBXTargetDependency */,
 			);
-			name = "Cash StashUITests";
+			name = "Cash StashesUITests";
 			productName = "Cash StashUITests";
-			productReference = 0AD8DD2726AE53FD00AC6C1E /* Cash StashUITests.xctest */;
+			productReference = 0AD8DD2726AE53FD00AC6C1E /* Cash StashesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -313,7 +327,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0AD8DD0326AE53FC00AC6C1E /* Build configuration list for PBXProject "Cash Stash" */;
+			buildConfigurationList = 0AD8DD0326AE53FC00AC6C1E /* Build configuration list for PBXProject "Cash Stashes" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -328,9 +342,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AD8DD0726AE53FC00AC6C1E /* Cash Stash */,
-				0AD8DD1C26AE53FD00AC6C1E /* Cash StashTests */,
-				0AD8DD2626AE53FD00AC6C1E /* Cash StashUITests */,
+				0AD8DD0726AE53FC00AC6C1E /* Cash Stashes */,
+				0AD8DD1C26AE53FD00AC6C1E /* Cash StashesTests */,
+				0AD8DD2626AE53FD00AC6C1E /* Cash StashesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -376,6 +390,7 @@
 				0AC925DE2710B38900F51646 /* CashPage.swift in Sources */,
 				0AD8DD0E26AE53FC00AC6C1E /* ContentView.swift in Sources */,
 				0AC925EE2710D69400F51646 /* NewPage.swift in Sources */,
+				0AA93E7F2779D3D1001A00D1 /* EditSubPage.swift in Sources */,
 				0AD8DD4726AE951F00AC6C1E /* SavingsPage.swift in Sources */,
 				0AC925E02710B3A600F51646 /* GiftPage.swift in Sources */,
 				0AD8DD0C26AE53FC00AC6C1E /* Cash_StashApp.swift in Sources */,
@@ -384,10 +399,13 @@
 				0A61288726B119AA00098972 /* EditSheet2.swift in Sources */,
 				0AC925EB2710BDE800F51646 /* EditPage.swift in Sources */,
 				0AC925DC2710B36400F51646 /* ContentViewV2.swift in Sources */,
+				0AA93E812779DE22001A00D1 /* SubscriptionItem.swift in Sources */,
 				0AC925E22710B3AE00F51646 /* SavingPage.swift in Sources */,
 				0AD8DD4926AEA14500AC6C1E /* TotalsPage.swift in Sources */,
+				0AA93E7D2779D3CB001A00D1 /* NewSubPage.swift in Sources */,
 				0A61288F26B11AE700098972 /* NewSheet3.swift in Sources */,
 				0A61288D26B11AD200098972 /* NewSheet2.swift in Sources */,
+				0AA93E7B2779D221001A00D1 /* SubscriptionsPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,12 +430,12 @@
 /* Begin PBXTargetDependency section */
 		0AD8DD1F26AE53FD00AC6C1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AD8DD0726AE53FC00AC6C1E /* Cash Stash */;
+			target = 0AD8DD0726AE53FC00AC6C1E /* Cash Stashes */;
 			targetProxy = 0AD8DD1E26AE53FD00AC6C1E /* PBXContainerItemProxy */;
 		};
 		0AD8DD2926AE53FD00AC6C1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AD8DD0726AE53FC00AC6C1E /* Cash Stash */;
+			target = 0AD8DD0726AE53FC00AC6C1E /* Cash Stashes */;
 			targetProxy = 0AD8DD2826AE53FD00AC6C1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -545,11 +563,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1650;
+				CURRENT_PROJECT_VERSION = 1670;
 				DEVELOPMENT_ASSET_PATHS = "\"Cash Stash/Preview Content\"";
 				DEVELOPMENT_TEAM = RV78ENMXZ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cash-Stashes-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -560,12 +579,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.luckdev.Cash-Stash";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luckdev.Cash-Stashes";
+				PRODUCT_NAME = "Cash Stash";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,11 +594,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1650;
+				CURRENT_PROJECT_VERSION = 1670;
 				DEVELOPMENT_ASSET_PATHS = "\"Cash Stash/Preview Content\"";
 				DEVELOPMENT_TEAM = RV78ENMXZ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cash-Stashes-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -590,12 +610,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.luckdev.Cash-Stash";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luckdev.Cash-Stashes";
+				PRODUCT_NAME = "Cash Stash";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -620,7 +640,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cash Stash.app/Cash Stash";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cash Stashes.app/Cash Stashes";
 			};
 			name = Debug;
 		};
@@ -645,7 +665,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cash Stash.app/Cash Stash";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cash Stashes.app/Cash Stashes";
 			};
 			name = Release;
 		};
@@ -698,7 +718,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AD8DD0326AE53FC00AC6C1E /* Build configuration list for PBXProject "Cash Stash" */ = {
+		0AD8DD0326AE53FC00AC6C1E /* Build configuration list for PBXProject "Cash Stashes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AD8DD2D26AE53FD00AC6C1E /* Debug */,
@@ -707,7 +727,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AD8DD2F26AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash Stash" */ = {
+		0AD8DD2F26AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash Stashes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AD8DD3026AE53FD00AC6C1E /* Debug */,
@@ -716,7 +736,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AD8DD3226AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash StashTests" */ = {
+		0AD8DD3226AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash StashesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AD8DD3326AE53FD00AC6C1E /* Debug */,
@@ -725,7 +745,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AD8DD3526AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash StashUITests" */ = {
+		0AD8DD3526AE53FD00AC6C1E /* Build configuration list for PBXNativeTarget "Cash StashesUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AD8DD3626AE53FD00AC6C1E /* Debug */,

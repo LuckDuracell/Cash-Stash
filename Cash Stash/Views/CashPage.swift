@@ -24,6 +24,8 @@ struct CashPage: View {
     
     @Binding var toolbarColor: Color
     
+    @State var showTotals = false
+    
     var body: some View {
         ZStack {
             GradientBackground(color1: .mint, color2: .blue)
@@ -35,11 +37,17 @@ struct CashPage: View {
                         .bold()
                         .foregroundColor(.white)
                     Spacer()
-                    Text("$\(total, specifier: "%.2f")")
-                        .foregroundColor(.white)
-                        .padding(6)
-                        .background(.white.opacity(0.3))
-                        .cornerRadius(15)
+                    Button {
+                        withAnimation {
+                            showTotals.toggle()
+                        }
+                    } label: {
+                        Text("$\(total, specifier: "%.2f")")
+                            .foregroundColor(.white)
+                            .padding(6)
+                            .background(.white.opacity(0.3))
+                            .cornerRadius(15)
+                    }
 
                 }
                 .padding()
@@ -72,9 +80,39 @@ struct CashPage: View {
             })
             .sheet(isPresented: $isAdding, onDismiss: {
                 wallets = Wallet.loadFromFile()
+                total = 0
+                for i in wallets.indices {
+                    total += wallets[i].amount
+                }
             }, content: {
                 NewPage(showKeyboard: _showKeyboard, showSheet: $isAdding, stashType: .constant(1))
             })
+            Rectangle()
+                .ignoresSafeArea(.all)
+                .background(.thinMaterial)
+                .opacity(showTotals ? 1 : 0)
+                .edgesIgnoringSafeArea(.all)
+                .onTapGesture(perform: {
+                    withAnimation{
+                        showTotals = false
+                    }
+                })
+            VStack(alignment: .leading) {
+                Text("Total: $\(total, specifier: "%.2f")")
+                    .font(.title.bold())
+                    .foregroundColor(.white)
+                    .padding(6)
+            }
+            .padding()
+            .background(.thinMaterial)
+            .cornerRadius(15)
+            .onTapGesture {
+                withAnimation {
+                    showTotals = false
+                }
+            }
+            .opacity(showTotals ? 1 : 0)
+            .padding(.horizontal, 40)
         }
         .onAppear(perform: {
             toolbarColor = .blue
