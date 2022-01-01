@@ -31,7 +31,7 @@ struct SubscriptionItem: View {
             Spacer()
             Text("$\(amount, specifier: "%.2f")")
                 .padding(.trailing)
-                .foregroundColor(.black)
+                .foregroundColor(expense ? .red : .green)
         } .padding(10)
             .background(.white)
             .cornerRadius(10)
