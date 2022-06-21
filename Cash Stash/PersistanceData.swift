@@ -49,6 +49,7 @@ struct UserSubscriptions: Hashable, Codable, LocalFileStorable {
     var latestCharge: Date
     var timesCharged: Int
     var expense: Bool
+    var icon: String
 }
 
 protocol LocalFilesStorable: Codable {

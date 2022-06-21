@@ -9,29 +9,24 @@ import SwiftUI
 
 struct SubscriptionItem: View {
     
-    var icon: String
-    @Binding var name: String
-    @Binding var amount: Double
-    @Binding var expense: Bool
-    
-    @State var highlightColor: Color = .green
+    @Binding var sub: UserSubscriptions
     
     var body: some View {
         HStack {
-            Image(systemName: icon)
+            Image(systemName: sub.icon)
                 .resizable()
-                .foregroundColor(highlightColor)
+                .foregroundColor(.green)
                 .scaledToFill()
                 .frame(width: 30, height: 30, alignment: .center)
                 .padding(.leading, 5)
-            Text(name)
+            Text(sub.subscriptionName)
                 .padding(.leading, 10)
                 .foregroundColor(.black)
                 .lineLimit(1)
             Spacer()
-            Text("$\(amount, specifier: "%.2f")")
+            Text("$\(sub.amount, specifier: "%.2f")")
                 .padding(.trailing)
-                .foregroundColor(expense ? .red : .green)
+                .foregroundColor(sub.expense ? .red : .green)
         } .padding(10)
             .background(.white)
             .cornerRadius(10)

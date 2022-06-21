@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewSubPage: View {
     
-    @State var icon = "hourglass"
+    @State var icon = "hourglass.circle.fill"
     @State var name = "New Item"
     @State var amount: Double = 0
     @State var walletNum = 1
@@ -154,6 +154,7 @@ struct NewSubPage: View {
                             Button {
                                 walletNum = 1
                                 indexNum = stashIndex
+                                icon = wallet[stashIndex].icon
                             } label: {
                                 HStack {
                                     Image(systemName: wallet[stashIndex].icon)
@@ -171,6 +172,7 @@ struct NewSubPage: View {
                             Button {
                                 walletNum = 2
                                 indexNum = stashIndex
+                                icon = wallet2[stashIndex].icon
                             } label: {
                                 HStack {
                                     Image(systemName: wallet2[stashIndex].icon)
@@ -188,6 +190,7 @@ struct NewSubPage: View {
                             Button {
                                 walletNum = 3
                                 indexNum = stashIndex
+                                icon = wallet3[stashIndex].icon
                             } label: {
                                 HStack {
                                     Image(systemName: wallet3[stashIndex].icon)
@@ -219,7 +222,7 @@ struct NewSubPage: View {
                     if name == "" || name == " " {
                         name = "Unnamed Subscription"
                     }
-                    subscriptions.insert(UserSubscriptions(subscriptionName: name, amount: amount, wallet: walletNum, indexNum: indexNum, frequency: type, updated: Date(), latestCharge: lastChargerd, timesCharged: 0, expense: expense), at: 0)
+                    subscriptions.insert(UserSubscriptions(subscriptionName: name, amount: amount, wallet: walletNum, indexNum: indexNum, frequency: type, updated: Date(), latestCharge: lastChargerd, timesCharged: 0, expense: expense, icon: icon), at: 0)
                     UserSubscriptions.saveToFile(subscriptions)
                     showSheet = false
                 } label: {

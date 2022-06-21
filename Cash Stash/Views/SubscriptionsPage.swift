@@ -9,15 +9,7 @@ import SwiftUI
 
 struct SubscriptionsPage: View {
     
-    @State var subscriptions = UserSubscriptions.loadFromFile()
-    @State var annual: Double = 0
-    @State var annualIncome: Double = 0
-    
-    @State var itemIndex = 0
-
     @Binding var toolbarColor: Color
-    
-    @State var selection: UserSubscriptions = UserSubscriptions(subscriptionName: "", amount: 0, wallet: 0, indexNum: 0, frequency: "10000", updated: Date(), latestCharge: Date(), timesCharged: 0, expense: true)
     
     @State var showSheet = false
     @State var isAdding = false
@@ -27,7 +19,7 @@ struct SubscriptionsPage: View {
     
     @FocusState var showKeyboard: Bool
     
-    @State var icons: [String] = randomIcon(count: UserSubscriptions.loadFromFile().count)
+    @State var subscriptions: [UserSubscriptions] = UserSubscriptions.loadFromFile()
     
     var body: some View {
         ZStack {
@@ -45,7 +37,7 @@ struct SubscriptionsPage: View {
                             showTotals.toggle()
                         }
                     } label: {
-                        Text("$\(annual, specifier: "%.2f")")
+                        Text("$\(calcAnnual().0, specifier: "%.2f")")
                             .foregroundColor(.white)
                             .padding(6)
                             .background(.white.opacity(0.3))
@@ -53,40 +45,26 @@ struct SubscriptionsPage: View {
                     }
                 }
                 .padding()
-                ForEach(subscriptions.indices, id: \.self, content: { index in
-                    Button {
-                        itemIndex = index
-                        selection = subscriptions[index]
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05, execute: {
-                            showSheet.toggle()
+                ForEach($subscriptions, id: \.self, content: { $sub in
+                        Button {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05, execute: {
+                                showSheet.toggle()
+                            })
+                        } label: {
+                            SubscriptionItem(sub: $sub)
+                                .padding(1)
+                        }
+                        .sheet(isPresented: $showSheet, onDismiss: {
+                            subscriptions = UserSubscriptions.loadFromFile()
+                        }, content: {
+                            EditSubPage(subscription: $sub, showSheet: $showSheet)
                         })
-                    } label: {
-                        SubscriptionItem(icon: icons[index], name: $subscriptions[index].subscriptionName, amount: $subscriptions[index].amount, expense: $subscriptions[index].expense)
-                            .padding(1)
-                    }
                 })
             }
             .sheet(isPresented: $isAdding, onDismiss: {
                 subscriptions = UserSubscriptions.loadFromFile()
-                icons = randomIcon(count: UserSubscriptions.loadFromFile().count)
-                calcAnnual()
             }, content: {
                 NewSubPage(showKeyboard: _showKeyboard, showSheet: $isAdding)
-            })
-            .sheet(isPresented: $showSheet, onDismiss: {
-                subscriptions[itemIndex] = selection
-                //this solution is so bad that if ever written on a team then they'd issue a company wide apology
-                if isDeleting == false {
-                    UserSubscriptions.saveToFile(subscriptions)
-                } else {
-                    isDeleting = false
-                }
-                withAnimation {
-                    subscriptions = UserSubscriptions.loadFromFile()
-                }
-                calcAnnual()
-            }, content: {
-                EditSubPage(subscriptionIndex: itemIndex, subscription: $selection, walletNum: $selection.wallet, indexNum: $selection.indexNum, name: $selection.subscriptionName, amount: $selection.amount, lastChargerd: $selection.latestCharge, expense: $selection.expense, subscriptions: subscriptions, type: $selection.frequency, showKeyboard: _showKeyboard, showSheet: $showSheet, isDeleting: $isDeleting)
             })
             .overlay(alignment: .bottom, content: {
                 Button {
@@ -113,15 +91,15 @@ struct SubscriptionsPage: View {
                     }
                 })
             VStack(alignment: .leading) {
-                Text("Annual Expenses: $\(annual, specifier: "%.2f")")
+                Text("Annual Expenses: $\(calcAnnual().0, specifier: "%.2f")")
                     .font(.title.bold())
                     .foregroundColor(.white)
                     .padding(6)
-                Text("Annual Income: $\(annualIncome, specifier: "%.2f")")
+                Text("Annual Income: $\(calcAnnual().1, specifier: "%.2f")")
                     .font(.title.bold())
                     .foregroundColor(.white)
                     .padding(6)
-                Text("Annual Net: $\(annualIncome-annual, specifier: "%.2f")")
+                Text("Annual Net: $\(calcAnnual().1-calcAnnual().0, specifier: "%.2f")")
                     .font(.title.bold())
                     .foregroundColor(.white)
                     .padding(6)
@@ -138,39 +116,41 @@ struct SubscriptionsPage: View {
             .padding(.horizontal, 40)
         }
         .onAppear(perform: {
-            calcAnnual()
             toolbarColor = .green
         })
     }
     
-    func calcAnnual() {
-        annual = 0
-        annualIncome = 0
-        for subscription in subscriptions {
-            if subscription.expense {
-                switch subscription.frequency {
-                case "Weekly":
-                    annual += subscription.amount * 52
-                case "Monthly":
-                    annual += subscription.amount * 12
-                case "Annual":
-                    annual += subscription.amount
-                default:
-                    annual += subscription.amount * (365 / (Double(subscription.frequency) ?? 1).rounded(.down))
-                }
-            } else {
-                switch subscription.frequency {
-                case "Weekly":
-                    annualIncome += subscription.amount * 52
-                case "Monthly":
-                    annualIncome += subscription.amount * 12
-                case "Annual":
-                    annualIncome += subscription.amount
-                default:
-                    annualIncome += subscription.amount * (365 / Double(subscription.frequency)!.rounded(.down))
+    func calcAnnual() -> (Double, Double) {
+        var annual: Double = 0
+        var annualIncome: Double = 0
+        if subscriptions != [] {
+            for subscription in subscriptions {
+                if subscription.expense {
+                    switch subscription.frequency {
+                    case "Weekly":
+                        annual += subscription.amount * 52
+                    case "Monthly":
+                        annual += subscription.amount * 12
+                    case "Annual":
+                        annual += subscription.amount
+                    default:
+                        annual += subscription.amount * (365 / (Double(subscription.frequency) ?? 1).rounded(.down))
+                    }
+                } else {
+                    switch subscription.frequency {
+                    case "Weekly":
+                        annualIncome += subscription.amount * 52
+                    case "Monthly":
+                        annualIncome += subscription.amount * 12
+                    case "Annual":
+                        annualIncome += subscription.amount
+                    default:
+                        annualIncome += subscription.amount * (365 / Double(subscription.frequency)!.rounded(.down))
+                    }
                 }
             }
         }
+        return (annual, annualIncome)
     }
     
 }
